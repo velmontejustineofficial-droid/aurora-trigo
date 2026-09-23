@@ -1,8 +1,8 @@
 <?php
-$servername = "sql110.infinityfree.com";       //your hosting DB host (usually localhost)
-$username   = "if0_41474999";            //your hosting DB username
-$password   = "wsXlfNdXcIt";                //your hosting DB password
-$dbname     = "if0_41474999_aurora_trigo";    //your DB name
+$servername = "sql212.infinityfree.com";       //your hosting DB host (usually localhost)
+$username   = "if0_42991926";            //your hosting DB username
+$password   = "KYuZTWnTl0FpY";                //your hosting DB password
+$dbname     = "if0_42991926_XXX";    //your DB name
 
 //create mysqli connection
 $conn = new mysqli($servername, $username, $password, $dbname);
