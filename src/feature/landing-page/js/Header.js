@@ -2,7 +2,7 @@ export default function Header() {
     const nav = document.createElement('nav');
 
     const img = document.createElement('img');
-    img.src = "../../assets/Logo.png";
+    img.src = "/src/assets/logo/Logo.png";
     //img.className = "nav-logo";
     img.alt = 'Baler Tri-Go Logo';
     img.style = "width:10%; height:10%; object-fit: contain; padding: 3px;";

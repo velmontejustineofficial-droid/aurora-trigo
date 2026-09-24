@@ -1,3 +1,24 @@
+  :root {
+    --teal:   #2ec4b6;
+    --teal2:  #1a9e92;
+    --gold:   #f4a01c;
+    --red:    #e63946;
+    --dark:   #1a2332;
+    --light:  #f0faf9;
+    --white:  #ffffff;
+    --glass:  rgba(255,255,255,0.18);
+    --shadow: 0 8px 32px rgba(0,0,0,0.18);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:'Nunito',sans-serif;
+    background: var(--dark);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── HERO BG ── */
   .hero-bg {
     position:fixed; inset:0; z-index:0;
     background: url('https://images.pexels.com/photos/15050558/pexels-photo-15050558.jpeg?') center/cover no-repeat;
@@ -11,7 +32,7 @@
       rgba(244,160,28,0.25) 100%);
   }
 
-    /* ── NAV ── */
+  /* ── NAV ── */
   nav {
     position:fixed; top:0; left:0; right:0; z-index:100;
     display:flex; align-items:center; justify-content:space-between;
@@ -39,7 +60,6 @@
     transition:all .25s; text-decoration:none;
   }
   .btn-solid:hover { background:var(--teal2); border-color:var(--teal2); }
-
 
   /* ── HERO CONTENT ── */
   .hero {
@@ -113,4 +133,23 @@
   @keyframes fadeUp {
     from { opacity:0; transform:translateY(28px); }
     to   { opacity:1; transform:translateY(0); }
+  }
+
+  /* ── STATS STRIP ── */
+  .stats-strip {
+    position:relative; z-index:10;
+    display:flex; gap:0; max-width:1200px; margin:0 auto 60px;
+    padding:0 60px;
+    animation: fadeUp .6s .5s ease both;
+  }
+  .stat { text-align:center; flex:1; }
+  .stat-num { font-family:'Baloo 2',sans-serif; font-size:2.2rem; font-weight:800; color:var(--teal); }
+  .stat-lbl { font-size:.82rem; color:rgba(255,255,255,.6); letter-spacing:1px; }
+  .stat-div { width:1px; background:rgba(255,255,255,.15); margin:8px 0; }
+
+  @media(max-width:768px){
+    .features { grid-template-columns:1fr; padding:0 20px 40px; }
+    .hero { padding:100px 20px 40px; }
+    .stats-strip { padding:0 20px; flex-wrap:wrap; gap:20px; }
+    nav { padding:12px 20px; }
   }
