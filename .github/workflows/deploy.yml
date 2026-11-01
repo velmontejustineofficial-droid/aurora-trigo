@@ -24,3 +24,9 @@ jobs:
           server-dir: /htdocs/
           protocol: ftp
           port: 21
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/node_modules/**
+            **/.env
