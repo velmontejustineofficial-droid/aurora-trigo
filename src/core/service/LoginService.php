@@ -6,9 +6,9 @@ class LoginService {
         private UserRepository $userRepository
     ) {}
 
-    public function validate($username, $password, $role): array {
+    public function validate($email, $password, $role): array {
         $hashPassword = hash('sha256', $password);
-        $user = $this->userRepository->getByUsername($username);
+        $user = $this->userRepository->getByUsername($email);
 
         if ($user === null) {
             throw new Exception("Invalid username");
@@ -26,8 +26,8 @@ class LoginService {
             throw new Exception($error);
         }
 
-        session_start();
-        $_SESSION['auth_token'] = bin2hex(random_bytes(32));
-        $_SESSION['user_id'] = $user['id'];
+        // session_start();
+        // $_SESSION['auth_token'] = bin2hex(random_bytes(32));
+        // $_SESSION['user_id'] = $user['id'];
     }
 }

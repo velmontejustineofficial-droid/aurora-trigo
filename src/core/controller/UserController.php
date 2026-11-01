@@ -13,6 +13,8 @@ class UserController {
         $role = $_POST['role'];
         $email = $_POST['email'];
         $password = $_POST['password'];
+        
+        $this->loginService->validate($role, $email, $password);
 
         echo json_encode([
             'success' => true,

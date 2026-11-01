@@ -50,10 +50,10 @@ export default function LoginPage() {
             });
             const result = await response.json();
             console.log(result);
-            //form.action = `/login/${roleSelect.value}`;
         }catch (error) {
+            console.log(error);
             errorMessage.style.display = "flex";
-            errorMessage.textContent = error.message;
+            errorMessage.textContent = error;
         }
     });
 
