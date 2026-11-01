@@ -1,12 +1,12 @@
 import HeaderBrand from './header/HeaderBrand.js';
-import HeaderNavigation from './header/HeaderNav.js';
+import HeaderNav from './header/HeaderNav.js';
 import HeroSection from './section/HeroSection.js';
 import Feature from './section/Features.js';
 import Stats from './section/Stats.js';
 
 export default function LandingPage() {
     const main = document.createElement('main');
-    const headerNavigation = new HeaderNavigation(
+    const headerNavigation = new HeaderNav(
         "Log In", "Register", "/login", "/register"
     );
     const headerBrand = new HeaderBrand(

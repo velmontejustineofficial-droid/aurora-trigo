@@ -6,7 +6,7 @@ function create_anchor_tag(className, textContent, href){
     return a;
 }
 
-export default class HeaderNavigation {
+export default class HeaderNav {
     constructor(loginText, registerText, loginHref, registerHref) {
         this.btn = document.createElement("div");
         this.login_btn = create_anchor_tag("btn-outline", loginText, loginHref);
