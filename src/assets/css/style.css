@@ -1,0 +1,37 @@
+/* ── COLOR SYSTEM & VARIABLES ── */
+:root {
+  /* Brand Accents */
+  --primary-teal:   #2EC4B6;
+  --teal-hover:     #20A396;
+  --accent-gold:    #F4A01C;
+  --alert-red:      #EF4444;
+
+  /* Theme Backgrounds */
+  --bg-app:         #111827;
+  --bg-card:        rgba(31, 41, 55, 0.7);
+  --bg-card-hover:  rgba(55, 65, 81, 0.85);
+  --nav-bg:         rgba(26, 35, 50, 0.85);
+  --border-color:   rgba(46, 196, 182, 0.25);
+
+  /* Text Colors */
+  --text-main:      #ffffff;
+  --text-sub:       rgba(255, 255, 255, 0.78);
+
+  /* Effects */
+  --shadow-card:    0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  --shadow-hover:   0 18px 35px -5px rgba(46, 196, 182, 0.25);
+  --glass-blur:     blur(14px);
+}
+
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+body {
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  font-family: 'Nunito', sans-serif;
+  overflow-x: hidden;
+}

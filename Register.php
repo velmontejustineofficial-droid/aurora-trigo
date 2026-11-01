@@ -315,7 +315,7 @@ textarea{resize:vertical;padding-left:14px;min-height:70px;}
 <body>
 <div class="bg"></div><div class="bg-grad"></div>
 <div class="wrapper">
-  <a href="index.html" class="back-link">← Back to Home</a>
+  <a href="/" class="back-link">← Back to Home</a>
 
   <!-- STEP 1: choose role -->
   <div class="step-card" id="step1">

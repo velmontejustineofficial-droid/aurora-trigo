@@ -1,0 +1,463 @@
+:root {
+    --teal: #2ec4b6;
+    --teal2: #1a9e92;
+    --gold: #f4a01c;
+    --red: #e63946;
+    --dark: #1a2332;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--dark);
+    padding: 24px 16px;
+    overflow-x: hidden;
+}
+
+/* BACKGROUND */
+.bg {
+    position: fixed;
+    inset: 0;
+    background: url('https://images.pexels.com/photos/15050558/pexels-photo-15050558.jpeg?') center/cover no-repeat;
+    filter: brightness(.3) saturate(.7);
+}
+
+.bg-grad {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(46,196,182,.4) 0%,
+        rgba(26,35,50,.6) 50%,
+        rgba(244,160,28,.2) 100%
+    );
+}
+
+/* CARD */
+.card {
+    position: relative;
+    z-index: 10;
+    background: rgba(255,255,255,.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 28px;
+    padding: 36px 32px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 24px 64px rgba(0,0,0,.4);
+    animation: slideUp .5s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* LOGO */
+.logo-wrap {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.logo-wrap .logo-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.logo-wrap svg {
+    width: 68px;
+    height: 68px;
+    filter: drop-shadow(0 4px 12px rgba(46,196,182,.4));
+}
+
+/* TEXT */
+h2 {
+    text-align: center;
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.sub {
+    text-align: center;
+    color: rgba(255,255,255,.6);
+    font-size: .9rem;
+    margin-bottom: 24px;
+}
+
+/* FORM */
+.form-group {
+    margin-bottom: 14px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    font-size: .78rem;
+    font-weight: 700;
+    color: rgba(255,255,255,.7);
+    margin-bottom: 6px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    min-width: 0;
+    padding: 13px 16px 13px 42px;
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 12px;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: border .2s;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.form-group input::placeholder {
+    color: rgba(255,255,255,.4);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--teal);
+}
+
+.form-group select option {
+    background: var(--dark);
+    color: #fff;
+}
+
+/* INPUT ICONS */
+.ico {
+    position: absolute;
+    left: 14px;
+    bottom: 13px;
+    font-size: 1rem;
+    pointer-events: none;
+}
+
+.toggle-pw {
+    position: absolute;
+    right: 14px;
+    bottom: 13px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: rgba(255,255,255,.5);
+    padding: 4px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* ERROR */
+.error {
+    background: rgba(230,57,70,.18);
+    border: 1px solid rgba(230,57,70,.5);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: .87rem;
+    color: #ff8a8a;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+/* LOGIN BUTTON */
+.btn-login {
+    width: 100%;
+    padding: 15px;
+    border-radius: 14px;
+    background: var(--teal);
+    border: none;
+    color: var(--dark);
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .25s;
+    margin-top: 6px;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+.btn-login:hover {
+    background: var(--teal2);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(46,196,182,.4);
+}
+
+.btn-login:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* DIVIDER */
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 18px 0;
+    color: rgba(255,255,255,.35);
+    font-size: .8rem;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,.15);
+}
+
+/* SOCIAL BUTTONS */
+.social-btns {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+
+.social-btn {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 6px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,.2);
+    background: rgba(255,255,255,.08);
+    cursor: pointer;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-size: .82rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: all .2s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.social-btn:hover {
+    background: rgba(255,255,255,.16);
+}
+
+/* LINKS */
+.forgot {
+    text-align: center;
+    margin-top: 14px;
+    font-size: .85rem;
+    color: rgba(255,255,255,.5);
+}
+
+.forgot a {
+    color: var(--teal);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 10px;
+    font-size: .88rem;
+    color: rgba(255,255,255,.55);
+}
+
+.register-link a {
+    color: var(--gold);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* ROLE SELECT */
+.role-btns {
+    margin-bottom: 20px;
+}
+
+.role-select {
+    width: 100%;
+    padding: 13px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,.2);
+    background: rgba(255,255,255,.12);
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+}
+
+.role-select:focus {
+    border-color: var(--teal);
+}
+
+.role-select option {
+    background: var(--dark);
+    color: #fff;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .card {
+        max-width: 440px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    body {
+        padding: 16px 12px;
+    }
+
+    .card {
+        padding: 28px 20px;
+        border-radius: 22px;
+        max-width: 100%;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .sub {
+        font-size: .85rem;
+        margin-bottom: 20px;
+    }
+
+    .logo-wrap {
+        margin-bottom: 18px;
+    }
+
+    .logo-wrap .logo-circle {
+        width: 68px;
+        height: 68px;
+    }
+
+    .logo-wrap svg {
+        width: 58px;
+        height: 58px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .role-select {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-size: 16px;
+    }
+
+    .social-btn {
+        font-size: .75rem;
+        padding: 10px 4px;
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 360px) {
+    body {
+        padding: 12px 8px;
+    }
+
+    .card {
+        padding: 24px 16px;
+        border-radius: 18px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .social-btns {
+        flex-direction: column;
+    }
+
+    .social-btn {
+        width: 100%;
+        padding: 11px;
+    }
+
+    .logo-wrap .logo-circle {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* SHORT SCREEN / LANDSCAPE PHONE */
+@media (max-height: 600px) and (min-width: 481px) {
+    body {
+        align-items: flex-start;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .card {
+        padding: 22px 28px;
+    }
+
+    .logo-wrap {
+        margin-bottom: 10px;
+    }
+
+    .logo-wrap .logo-circle {
+        width: 55px;
+        height: 55px;
+    }
+
+    .logo-wrap svg {
+        width: 48px;
+        height: 48px;
+    }
+
+    .sub {
+        margin-bottom: 14px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+}
+
+/* ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}
