@@ -15,15 +15,15 @@ const currentPath = window.location.pathname;
 
 switch (currentPath) {
     case '/':
-        const cssLandingPath = 'src/feature/landing-page/LandingPage.css';
+        setStyle('src/feature/landing-page/LandingPage.css');
         const landingContent = router.getRoute("/").content;
-        root.appendChild(setStyle(landingContent, cssLandingPath));
+        root.appendChild(landingContent);
         break;
 
     case '/login':
-        const cssLoginPath = 'src/feature/auth/LoginPage.css';
+        setStyle('src/feature/auth/LoginPage.css');
         const loginContent = router.getRoute("/login").content;
-        root.appendChild(setStyle(loginContent, cssLoginPath));
+        root.appendChild(loginContent);
         break;
 
     default:
