@@ -1,5 +1,5 @@
-import HeaderBrand from './header/headerBrand.js';
-import HeaderNavigation from './header/headerNav.js';
+import HeaderBrand from './header/HeaderBrand.js';
+import HeaderNavigation from './header/HeaderNav.js';
 import HeroSection from './section/HeroSection.js';
 import Feature from './section/Features.js';
 import Stats from './section/Stats.js';
