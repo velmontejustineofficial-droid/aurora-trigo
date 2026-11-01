@@ -43,7 +43,7 @@ export default function LoginPage() {
         e.preventDefault();
         try {
             const formData = new FormData(form);
-            const api = "http://localhost:8080/src/core/controller/UserController.php";
+            const api = "src/core/controller/UserController.php";
             const response = await fetch(api, {
                 method: 'POST',
                 body: formData
