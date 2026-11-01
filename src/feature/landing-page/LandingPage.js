@@ -31,7 +31,7 @@ export default function LandingPage() {
     heroSection.setHeroBadge('🛺 Baler, Aurora Province, Philippines');
     heroSection.setHeroTitle(`Fast, Safe <span class="accent">Tricycle</span> Booking <br> in <span class="gold">Baler</span>`);
     heroSection.setHeroSubtitle(`Book rides easily with nearby drivers.<br> Track trips, stay safe and travel smarter.`);
-    heroSection.setHeroCTA('/login', '/register', {register: '🛺 Book a Ride', login: 'Log In'});
+    heroSection.setHeroCTA('/?route=login', '/register', {register: '🛺 Book a Ride', login: 'Log In'});
 
     
     main.appendChild(header);

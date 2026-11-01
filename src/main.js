@@ -4,26 +4,26 @@ import Router from './utils/Router.js';
 import setStyle from './utils/setStyle.js';
 
 const router = new Router();
-// Add routes
-router.addRoute("/", LandingPage());
-router.addRoute("/login", LoginPage());
+
+// Register routes
+router.addRoute("home", LandingPage());
+router.addRoute("login", LoginPage());
 
 const root = document.getElementById('root');
-const currentPath = window.location.pathname;
 
+// Get GET parameter
+const params = new URLSearchParams(window.location.search);
+const currentRoute = params.get('route') || 'home';
 
-
-switch (currentPath) {
-    case '/':
+switch (currentRoute) {
+    case 'home':
         setStyle('src/feature/landing-page/LandingPage.css');
-        const landingContent = router.getRoute("/").content;
-        root.appendChild(landingContent);
+        root.appendChild(router.getRoute("home").content);
         break;
 
-    case '/login':
+    case 'login':
         setStyle('src/feature/auth/LoginPage.css');
-        const loginContent = router.getRoute("/login").content;
-        root.appendChild(loginContent);
+        root.appendChild(router.getRoute("login").content);
         break;
 
     default:
